@@ -9,14 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var currentCard = PlayingCard()
+    @State var currentCard: PlayingCard?
     
     var body: some View {
         VStack {
             
             Spacer()
             
-            Image(currentCard.cardImageName)
+            Image(currentCard?.cardImageName ?? "CardBack")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
             
@@ -28,12 +28,11 @@ struct ContentView: View {
                 Text("Draw Card")
                     .font(.title2)
                     .fontWeight(.bold)
+                    .padding()
+                    .padding(.horizontal, 75).background(Color(.sRGB, red: 1, green: 0, blue: 0, opacity: 1))
+                    .foregroundColor(.white)
+                    .clipShape(Capsule())
             }
-            .padding()
-            .padding(.horizontal, 75)
-            .background(.red)
-            .foregroundColor(.white)
-            .clipShape(Capsule())
             
             Spacer()
 
