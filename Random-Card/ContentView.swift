@@ -29,7 +29,8 @@ struct ContentView: View {
                     .font(.title2)
                     .fontWeight(.bold)
                     .padding()
-                    .padding(.horizontal, 75).background(Color(.sRGB, red: 1, green: 0, blue: 0, opacity: 1))
+                    .padding(.horizontal, 75)
+                    .background(Color(.sRGB, red: 1, green: 0, blue: 0, opacity: 1))
                     .foregroundColor(.white)
                     .clipShape(Capsule())
             }
