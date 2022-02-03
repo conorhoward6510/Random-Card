@@ -9,7 +9,7 @@ import Foundation
 
 struct PlayingCard {
     
-    let cardNumber = Int.random(in: 0..<51)
+    let cardNumber = Int.random(in: 0...51)
     var cardImageName: String {
         return "\(getCardValue())_of_\(getCardSuit())"
     }
